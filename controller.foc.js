@@ -38,6 +38,13 @@ controller.foc = function () {
         this.cosTheta = Math.cos(rad);
     }
 
+    this.sine_cosine_rad = function( ) {
+        var rad = this.theta;
+
+        this.sinTheta = Math.sin(rad);
+        this.cosTheta = Math.cos(rad);
+    }
+
     this.park = function ( )
     {
         this.Id =  this.Ialpha * this.cosTheta + this.Ibeta * this.sinTheta;

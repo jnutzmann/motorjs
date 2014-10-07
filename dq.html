@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>The Clark Park Transform</title>
+
+    <script type="application/javascript" src="jquery-2.1.0.min.js"></script>
+    <script type="application/javascript" src="jquery.flot.min.js"></script>
+    <script type="application/javascript" src="controller.foc.js"></script>
+    <script type="application/javascript" src="dq_demo.js"></script>
+
+    <style>
+
+        .plot_table {
+            width: 100%;
+        }
+
+        .plot_table td {
+            width: 50%;
+        }
+
+        .plot-div {
+            margin:15px;
+            width:100%;
+            height: 250px;
+        }
+
+    </style>
+
+</head>
+<body>
+<table class="plot_table">
+    <tr>
+        <td><div class="plot-div" id="plot_theta"></div></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><div class="plot-div" id="plot_iabc"></div></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><div class="plot-div" id="plot_ialphabeta"></div></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><div class="plot-div" id="plot_idq"></div></td>
+        <td></td>
+    </tr>
+
+</table>
+<div class="plot"></div>
+<div  class="plot"></div>
+
+
+</body>
+</html>

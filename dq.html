@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>The Clark Park Transform</title>
 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <script type="application/javascript" src="js/bootstrap.min.js"></script>
+
     <script type="application/javascript" src="jquery-2.1.0.min.js"></script>
     <script type="application/javascript" src="jquery.flot.min.js"></script>
     <script type="application/javascript" src="controller.foc.js"></script>
@@ -25,10 +30,113 @@
             height: 250px;
         }
 
+        header {
+            background: black;
+            height: 60px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        header div {
+            color: white;
+            font-size: 1.5em;
+            margin-left: 15px;
+            margin-top: 15px;
+            float: left;
+            font-style: italic;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        header img {
+            margin-top: 13px;
+            margin-left: 10px;
+            margin-right: 10px;
+            height: 35px;
+            float: left;
+        }
+
+        body {
+            padding-top: 60px;
+        }
+
+        #parameters {
+            background: green;
+            right: 0;
+            left: 0;
+            color: white;
+            padding-bottom: 20px;
+            overflow: auto;
+        }
+
+        #parameters input {
+            color: #000000;
+            width: 60px;
+        }
+
+        #parameters span {
+            width: 100%;
+            text-align: center;
+            display: block;
+            font-size: 1.5em;
+
+        }
+
+        #parameters table {
+            margin-left: 20px;
+            padding-bottom: 20px;
+        }
+
+        #parameters tr td:first-child {
+            font-weight: bold;
+            padding-right: 10px;
+            text-align: right;
+        }
+
+        #parameters tr td:nth-child(2) {
+            padding: 2px;
+        }
+
+        .arrow-right {
+            font-size: 8em;
+            margin-left: 50px;
+        }
+
     </style>
 
 </head>
 <body>
+
+<header>
+    <img src="FSE.png">
+    <div>MotorJS - DQ Edition</div>
+</header>
+
+<div id="parameters">
+    <span>Parameters</span>
+
+    <table class="pull-left">
+        <tr>
+            <td>Tire Diameter</td>
+            <td><input type="number" value="21"> inches</td>
+        </tr>
+        <tr>
+            <td>Max Speed</td>
+            <td><input type="number" value="65"> MPH</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="number" value="21"> inches</td>
+        </tr>
+    </table>
+
+    <div class="pull-left arrow-right"><i class="glyphicon glyphicon-arrow-right"></i></div>
+</div>
+
+
+
 <table class="plot_table">
     <tr>
         <td><div class="plot-div" id="plot_theta"></div></td>

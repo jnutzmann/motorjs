@@ -79,7 +79,13 @@ for (var i=0; i < _theta.length; i++) {
 }
 
 $(document).ready(function() {
-    $.plot($("#plot_theta"), [plot(_theta, _theta, "theta")]);
+
+    $.plot($("#plot_theta"),
+        [
+            plot(_theta, _theta, "theta")
+        ]
+    );
+
     $.plot($("#plot_iabc"),
         [
             plot(_theta, _ia, "Ia"),
@@ -87,12 +93,14 @@ $(document).ready(function() {
             plot(_theta, _ic, "Ic")
         ]
     );
+
     $.plot($("#plot_ialphabeta"),
         [
             plot(_theta, _ialpha, "Ialpha"),
             plot(_theta, _ibeta, "Ibeta"),
         ]
     );
+
     $.plot($("#plot_idq"),
         [
             plot(_theta, _id, "Id"),
